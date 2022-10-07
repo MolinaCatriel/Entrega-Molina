@@ -1,0 +1,42 @@
+$animacion_img: scale(1.2);
+$transicion_img: all 0.5s ease;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin bordeImg($borde:3px, $color:black ,$forma:solid){
+    border: $borde $color $forma;
+}
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+.imagenDestaca{
+    @include bordeImg();
+    &:hover{
+    transform: $animacion_img;
+    transition: $transicion_img;
+    }    
+}
+.texto-bubleGum{
+    color: rgb(233, 144, 159);
+}
+.texto-uvaShake{
+    color: purple
+}
+.texto-ilussionWax{
+    color: purple;
+}
+
+@import "header";
+@import "contacto";
+@import "footer";
+
+@media (max-width:768px) {
+    #intro {
+        width: 90% !important;
+    }
+}
